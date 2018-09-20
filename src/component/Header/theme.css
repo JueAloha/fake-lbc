@@ -1,0 +1,18 @@
+nav {
+  height: 10vh;
+}
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 10vh;
+}
+
+li {
+  list-style: none;
+}
+
+.logo {
+  width: 14vw;
+  height: auto;
+  margin-top: ;
+}

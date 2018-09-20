@@ -1,4 +1,4 @@
-.container > div {
+.container > a > div {
   width: 767px;
   height: auto;
   padding: 15px;
@@ -12,6 +12,10 @@
 .container > div:hover {
   background-color: pink;
   border: 1px solid purple;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
@@ -39,6 +43,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 400;
+  color: black;
 }
 
 .price {

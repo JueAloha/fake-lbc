@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import leboncoin from "leboncoin-api";
 import AddCard from "../AddCard";
 
@@ -14,6 +15,7 @@ class AddList extends React.Component {
     search.run().then(
       data => {
         this.setState({ products: data.results });
+        console.log(this.state.products);
       },
       function(err) {
         console.error(err);
@@ -29,7 +31,11 @@ class AddList extends React.Component {
     return (
       <div className="container">
         {this.state.products.map(product => (
-          <AddCard product={product} />
+          <Link to="/AddView" key={product.id}>
+            <div>
+              <AddCard product={product} />
+            </div>
+          </Link>
         ))}
       </div>
     );

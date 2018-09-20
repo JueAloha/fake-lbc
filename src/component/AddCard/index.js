@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
+
 import "./theme.css";
 
-class AddCard extends React.Component {
+class AddCard extends Component {
   render() {
     return (
-      <div key={this.props.product.id}>
+      <Fragment>
         <div>
           <img src={this.props.product.images} alt={this.props.product.title} />
         </div>
@@ -15,7 +16,7 @@ class AddCard extends React.Component {
           <p className="price">{this.props.product.price} €</p>
           <p className="date">{this.props.product.date.toString()}</p>
         </div>
-      </div>
+      </Fragment>
     );
   }
 }

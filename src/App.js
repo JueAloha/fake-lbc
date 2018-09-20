@@ -1,13 +1,20 @@
 import React, { Component, Fragment } from "react";
+import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./component/Home";
+import AddView from "./component/AddView";
 import "./App.css";
-import AddList from "./component/AddList";
 
 class App extends Component {
   render() {
     return (
-      <Fragment>
-        <AddList />
-      </Fragment>
+      <Router>
+        <Fragment>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/AddView" component={AddView} />
+          </Switch>
+        </Fragment>
+      </Router>
     );
   }
 }
