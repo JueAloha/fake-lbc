@@ -1,0 +1,52 @@
+.container > div {
+  width: 767px;
+  height: auto;
+  padding: 15px;
+  margin: 15px;
+  display: flex;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.container > div:hover {
+  background-color: pink;
+  border: 1px solid purple;
+}
+
+h1 {
+  font-size: 19px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #369;
+  margin: 0;
+}
+
+img {
+  width: 192px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.info {
+  margin-left: 28px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.price {
+  color: #f56b2a;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.date {
+  align-self: end;
+}

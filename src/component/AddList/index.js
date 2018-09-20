@@ -1,5 +1,6 @@
 import React from "react";
 import leboncoin from "leboncoin-api";
+import AddCard from "../AddCard";
 
 class AddList extends React.Component {
   constructor(props) {
@@ -9,7 +10,6 @@ class AddList extends React.Component {
 
   componentDidMount() {
     const search = new leboncoin.Search().setPage(1);
-    // Please check into categories & sub categories constants to know which are the sub categories to add into "addSearchExtra"
 
     search.run().then(
       data => {
@@ -25,16 +25,11 @@ class AddList extends React.Component {
     if (this.state.products.length === 0) {
       return <p>J'AI RIEN A PRÉSENTER !</p>;
     }
-    console.log("Nouveau State");
-    console.log(this.state.products);
 
     return (
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div className="container">
         {this.state.products.map(product => (
-          <span key={product.id}>
-            {product.id}
-            {product.title}
-          </span>
+          <AddCard product={product} />
         ))}
       </div>
     );
